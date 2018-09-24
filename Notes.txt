@@ -1,0 +1,7 @@
+Created the base UI framework
+Created the base RestFul Web Service API
+Created the base Entity Framework - Code First
+Created the base UI using angular to web api
+
+The webservice should be started before running the UI.
+

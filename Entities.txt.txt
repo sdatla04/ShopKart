@@ -1,0 +1,48 @@
+
+Customer
+Name
+email
+address Schema
+membershipType schema
+
+Address Schema
+Street
+city
+zip
+
+MembershipType schema
+Name
+SignupFee
+DurationInMonths
+DiscountRate
+
+Products
+name
+image
+Description
+mpn
+OffersSchema
+ProductTypeSchema
+AggregateRatingSchema
+
+OffersSchema
+price
+availability
+OfferTypeSchema
+
+OfferTypeSchema
+name
+
+ProductTypeSchema
+name
+
+AggregateRatingSchema
+ratingValue
+reviewCount
+
+
+Orders
+OrderNumber
+OrderDate
+Customer
+ProductList<Product>

@@ -1,0 +1,49 @@
+﻿<!--<employee-count  *ngIf="employees"
+                    [all]="getAllEmployeeCount()"
+                    [male]="getMaleEmployeeCount()"
+                    [female]="getFemaleEmployeeCount()"
+                (selectionChangedForCountRadio) ="onEmployeeCountRadioChanged($event)">
+
+</employee-count>-->
+<!--<br/><br />-->
+<button class="btn btn-default" onclick="">New Customer</button>
+
+
+<br /><br />
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>DateOfBirth</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let customer of customers;">
+            <!-- <tr *ngIf="selectedRadioButton == 'All' || selectedRadioButton == customer.gender">-->
+            <tr>
+                <td>
+                    <a [routerLink]="['/customers',customer.Id ]">
+                        {{customer.Id }}
+                    </a>
+                </td>
+                <td>{{customer.Name}}</td>
+                <td>{{customer.Birthdate | date:'dd/MM/yyyy' | uppercase}}</td>
+
+            </tr>
+        </ng-container>
+        <tr *ngIf="!customers">
+            <td colspan="3">{{statusMessage}}</td>
+
+        </tr>
+        <tr *ngIf="customers  && customers.length == 0">
+            <td colspan="5">No Customers to Display !</td>
+
+        </tr>
+    </tbody>
+</table>
+
+<br />

@@ -1,0 +1,42 @@
+﻿
+<table *ngIf="customer">
+    <thead>
+        <tr>
+            <th colspan="2">
+                Customer Details
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ID</td>
+            <td>{{customer.Id}}</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{customer.Name}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{customer.Email}}</td>
+        </tr>
+        <tr>
+            <td>IsSubscribedToNewsletter</td>
+            <td>{{customer.IsSubscribedToNewsletter}}</td>
+        </tr>
+        <tr>
+            <td>DateOfBirth</td>
+            <td>{{customer.Birthdate}}</td>
+        </tr>
+
+    </tbody>
+</table>
+<br />
+<div>
+    <div *ngIf="!customer">
+     {{statusMessage}}
+
+    </div>
+
+</div>
+
